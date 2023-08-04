@@ -1,0 +1,41 @@
+﻿@model Slider
+@{
+	ViewData["Title"] = "Delete";
+}
+
+<h1>Delete Slider</h1>
+<div>
+	<form method="post" asp-action="delete" enctype="multipart/form-data">
+		<div class="row">
+		<div class="mb-3 col-md-3">
+			<label asp-for="Title" class="form-label">Title</label>
+			<input  class="form-control" asp-for="Title" placeholder="Title">
+		<span class="text-danger" asp-validation-for="Title"></span>
+		</div>
+		<div class="mb-3 col-md-2">
+			<label asp-for="Description" class="form-label">Description</label>
+			<input  class="form-control" asp-for="Description" placeholder="Description">
+				<span class="text-danger" asp-validation-for="Description"></span>
+		</div>
+		<div class="mb-3  col-md-2 ">
+			<label asp-for="URL" class="form-label">URL</label>
+			<input  class="form-control" asp-for="URL" placeholder="URL">
+			<span class="text-danger" asp-validation-for="URL"></span>
+		</div>
+	@*	<div class="mb-3  col-md-2">
+			<label asp-for="Img" class="form-label">Img</label>
+			<input  class="form-control" asp-for="Img" placeholder="Img">
+		</div>*@
+		<div class="mb-3 col-md-2" style="margin-bottom:20px">
+			<label asp-for="FromFile" class="form-label">FromFile</label>
+			<input  class="form-control" asp-for="FromFile" placeholder="FromFile">
+				<span class="text-danger" asp-validation-for="FromFile"></span>
+			</div>
+			
+
+			<div style ="display:flex; justify-content:center;align-items:center">
+
+		     <button type="submit" class="btn btn-primary">Delete</button>
+	</form>
+</div>
+
